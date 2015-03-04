@@ -1,0 +1,44 @@
+Learning Git:
+
+* Storing configurations:
+
+	- System
+		/etc/gitconfig
+		Program Files\Git\etc\gitconfig
+	- User
+		~/.gitconfig
+	- Project
+		my_project/.git/config
+
+* System
+	git config --system
+* User
+	git config --global
+* Project
+	git config
+
+Commands:
+
+# set user (global) configurations
+git config --global user.name "samuraix"
+git config --global user.email "ivodwvio@mail.bg"
+git config --global core.editor "sublime.exe"
+git config --global color.ui true
+
+# show configurations
+git config --list
+git config user.name
+git config user.email
+
+# getting help in git
+git help
+git help log
+
+# common
+git init
+git status
+
+git add .
+git commit -m "Message for the comming"
+
+git add file_name.txt
