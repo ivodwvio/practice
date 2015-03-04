@@ -34,11 +34,28 @@ git config user.email
 git help
 git help log
 
+# Basic cicle
+* make changes
+* add the changes
+* commit changes to the repository with a message
+
 # common
 git init
+
 git status
 
 git add .
-git commit -m "Message for the comming"
-
 git add file_name.txt
+
+git commit -m "Message for the commint"
+git commit file_name -m "Message for the commit"
+
+git log
+git log -n 5
+git log --since=2012-06-15
+git log --until=2012-06-16
+git log --author="samuraix"
+git log --grep="Init"
+
+git diff
+git diff file_name.txt
