@@ -35,9 +35,18 @@ git help
 git help log
 
 # Basic cicle
-* make changes
-* add the changes
-* commit changes to the repository with a message
+	- make changes
+	- add the changes
+	- commit changes to the repository with a message
+
+# project/.gitignore
+	very basic regular expressions
+	* ? [aeiou] [0-9]
+	*.php
+	file_name.txt
+	!index.php
+	assets/videos/
+	comment lines begin with #
 
 # common
 git init
