@@ -17,33 +17,13 @@ Learning Git:
 * Project
 	git config
 
-Commands:
-
-# set user (global) configurations
-git config --global user.name "samuraix"
-git config --global user.email "ivodwvio@mail.bg"
-git config --global core.editor "sublime.exe"
-git config --global color.ui true
-
-# for global ignore file
-git config --global core.excludesfile /Users/samuraix/.gitignore_global
-
-# show configurations
-git config --list
-git config user.name
-git config user.email
-
-# getting help in git
-git help
-git help log
-
 # Basic cicle
 	- make changes
 	- add the changes
 	- commit changes to the repository with a message
 
 # project/.gitignore
-	very basic regular expressions
+# very basic regular expressions for the .gitignore file
 	* ? [aeiou] [0-9]
 	*.php
 	file_name.txt
@@ -51,43 +31,18 @@ git help log
 	assets/videos/
 	comment lines begin with #
 
-# common
-git init
+# Track empty folders
+	.gitkeep
 
-git status
-
-git add .
-git add file_to_add.txt
-
-git rm file_to_remove.txt
-
-git mv file_name.txt file_new.txt
-git mv file_name.txt new_path/file_name.txt
-
-git diff
-git diff --color-words
-git diff --staged
-git diff file_name.txt
-
-git commit -m "Message for the commint"
-git commit -am "Add and commit with one command."
-git commit file_name -m "Message for the commit"
-git commit --amend -m "Add changes to the last commint."
-
-git log
-git log -n 5
-git log --since=2012-06-15
-git log --until=2012-06-16
-git log --author="samuraix"
-git log --grep="Init"
-
-git checkout -- file_name.txt
-
-git reset HEAD file_name.txt
-
-git checkout SHA -- file_name.txt
-
-git revert SHA
+# parent commit
+	- HEAD^, acf87504^, master^
+	- HEAD~1, HEAD~
+# grandparent commit
+	- HEAD^^, acf87504^^, master^^
+	- HEAD~2
+# great-grandparent commit
+	- HEAD^^^, acf87504^^^, master^^^
+	- HEAD~3
 
 git reset
 	--soft
@@ -98,9 +53,107 @@ git reset
 	--hard
 		changes staging index and working directory to
 		match repository
+
+Commands:
+
+# set user (global) configurations
+git config --global user.name "samuraix"
+git config --global user.email "ivodwvio@mail.bg"
+git config --global core.editor "sublime.exe"
+git config --global color.ui true
+git config --global core.excludesfile C:/Users/samuraix/.gitignore
+
+# show configurations
+git config --list
+git config user.name
+git config user.email
+
+# getting help in git
+git help
+git help log
+
+# common
+git init
+
+git status
+
+git add .
+git add file_to_add.txt
+
+git rm file_to_remove.txt
+git rm --cached file_to_stop_tracking.txt
+
+git mv file_name.txt file_new.txt
+git mv file_name.txt new_path/file_name.txt
+
+git diff
+git diff --color-words
+git diff --staged
+git diff --cached
+git diff file_name.txt
+git diff sha
+git diff sha file_name.txt
+git diff sha..sha
+git diff sha..sha file_name.txt
+git diff --stat --summary sha..HEAD
+gid diff -b
+gid diff --ignore-space-change
+gid diff -w
+gid diff --ignore-all-space
+
+git commit -m "Message for the commint"
+git commit -am "Add and commit with one command."
+git commit file_name -m "Message for the commit"
+git commit --amend -m "Add changes to the last commint."
+
+git log
+git log -p
+git log --stat --summary
+git log -n 5
+git log -5
+git log --format=oneline
+git log --format=short
+git log --format=full
+git log --format=fuller
+git log --format=email
+git log --format=raw
+git log --graph
+git log --oneline --graph --all --decorate
+git log --since=2012-06-15
+git log --after=2012-06-15
+git log --since="2 weeks ago" --until="3 days ago"
+git log --since=2.weeks --until=3.days
+git log --until=2012-06-16
+git log --before=2012-06-16
+git log --before=today
+git log --author="samuraix"
+git log --grep="Init"
+git log --oneline
+git log sha..sha
+git log sha.. file_name.txt
+
+git checkout -- file_name.txt
+
+git reset HEAD file_name.txt
+
+git checkout SHA -- file_name.txt
+
+git revert SHA
+
 git reset --soft SHA
 git reset --mixed SHA
 git reset --hard SHA
 
 git clean -n
 git clean -f
+
+git ls-tree HEAD
+git ls-tree tree_sha
+git ls-tree master dir_name/
+git ls-tree master^ dir_name/
+
+git show sha
+
+git branch
+git branch new_feature
+git checkout new_feature
