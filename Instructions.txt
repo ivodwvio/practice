@@ -100,6 +100,8 @@ gid diff -b
 gid diff --ignore-space-change
 gid diff -w
 gid diff --ignore-all-space
+git diff branch_one branch_two
+git diff --color-words master..new_feature^
 
 git commit -m "Message for the commint"
 git commit -am "Add and commit with one command."
@@ -133,13 +135,13 @@ git log sha..sha
 git log sha.. file_name.txt
 
 git checkout -- file_name.txt
-
-git reset HEAD file_name.txt
-
 git checkout SHA -- file_name.txt
+git checkout new_feature
+git checkout -b new_feature
 
 git revert SHA
 
+git reset HEAD file_name.txt
 git reset --soft SHA
 git reset --mixed SHA
 git reset --hard SHA
@@ -156,5 +158,4 @@ git show sha
 
 git branch
 git branch new_feature
-git checkout new_feature
-git checkout -b new_feature
+git branch --merged
