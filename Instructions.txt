@@ -45,10 +45,22 @@ git init
 git status
 
 git add .
-git add file_name.txt
+git add file_to_add.txt
+
+git rm file_to_remove.txt
+
+git mv file_name.txt file_new.txt
+git mv file_name.txt new_path/file_name.txt
+
+git diff
+git diff --color-words
+git diff --staged
+git diff file_name.txt
 
 git commit -m "Message for the commint"
+git commit -am "Add and commit with one command."
 git commit file_name -m "Message for the commit"
+git commit --amend -m "Add changes to the last commint."
 
 git log
 git log -n 5
@@ -57,5 +69,26 @@ git log --until=2012-06-16
 git log --author="samuraix"
 git log --grep="Init"
 
-git diff
-git diff file_name.txt
+git checkout -- file_name.txt
+
+git reset HEAD file_name.txt
+
+git checkout SHA -- file_name.txt
+
+git revert SHA
+
+git reset
+	--soft
+		does not change staging index or working directory
+	--mixed (default)
+		changes staging index to match repository
+		does not change working directory
+	--hard
+		changes staging index and working directory to
+		match repository
+git reset --soft SHA
+git reset --mixed SHA
+git reset --hard SHA
+
+git clean -n
+git clean -f
