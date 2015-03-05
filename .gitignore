@@ -1,5 +1,5 @@
-# tempfile.txt
-*.txt
+tempfile.txt
+# *.txt
 .DS_Store
 *.zip
 *.gz

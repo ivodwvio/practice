@@ -25,6 +25,9 @@ git config --global user.email "ivodwvio@mail.bg"
 git config --global core.editor "sublime.exe"
 git config --global color.ui true
 
+# for global ignore file
+git config --global core.excludesfile /Users/samuraix/.gitignore_global
+
 # show configurations
 git config --list
 git config user.name
