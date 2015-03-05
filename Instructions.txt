@@ -157,3 +157,4 @@ git show sha
 git branch
 git branch new_feature
 git checkout new_feature
+git checkout -b new_feature
