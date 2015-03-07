@@ -60,8 +60,8 @@ Commands:
 git config --global user.name "samuraix"
 git config --global user.email "ivodwvio@mail.bg"
 git config --global core.editor "sublime.exe"
-git config --global color.ui true
 git config --global core.excludesfile C:/Users/samuraix/.gitignore
+git config --global color.ui true
 
 # show configurations
 git config --list
@@ -159,3 +159,9 @@ git show sha
 git branch
 git branch new_feature
 git branch --merged
+git branch -m new_feature new_name
+git branch --move new_feature new_name
+git branch -d branch_to_delete
+git branch -D branch_to_delete
+git branch --delete branch_to_delete
+
