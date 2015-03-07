@@ -166,6 +166,9 @@ git branch --move new_feature new_name
 git branch -d branch_to_delete
 git branch -D branch_to_delete
 git branch --delete branch_to_delete
+git branch -r
+git branch -a
+git branch --set-upstream non_tracking origin/non_tracking
 
 git merge new_feature
 git merge --no-ff branch_name
@@ -184,3 +187,11 @@ git stash show stash@{0}
 git stash show -p stash@{0}
 git stash drop stach@{0}
 git stash clear
+
+git remote
+git remote add origin https://github.com/ivodwvio/practice.git
+git remote -v
+git remote rm origin
+git push -u origin master
+git push origin non_tracking
+git clone https://github.com/ivodwvio/practice.git
