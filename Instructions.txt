@@ -171,3 +171,16 @@ git merge new_feature
 git merge --no-ff branch_name
 git merge --ff-only branch_name
 git merge --abort
+
+git stash save "changed mission page title"
+git stash list
+git stash -u "message"
+git stash --include-untracked "message"
+git stash pop
+git stash pop stash@{0}
+git stash apply
+git stash apply stash@{0}
+git stash show stash@{0}
+git stash show -p stash@{0}
+git stash drop stach@{0}
+git stash clear
