@@ -165,3 +165,4 @@ git branch -d branch_to_delete
 git branch -D branch_to_delete
 git branch --delete branch_to_delete
 
+git merge new_feature
