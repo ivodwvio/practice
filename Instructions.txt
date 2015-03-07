@@ -107,6 +107,7 @@ git commit -m "Message for the commint"
 git commit -am "Add and commit with one command."
 git commit file_name -m "Message for the commit"
 git commit --amend -m "Add changes to the last commint."
+git commit
 
 git log
 git log -p
@@ -133,6 +134,7 @@ git log --grep="Init"
 git log --oneline
 git log sha..sha
 git log sha.. file_name.txt
+git log branch_name --oneline -3
 
 git checkout -- file_name.txt
 git checkout SHA -- file_name.txt
@@ -166,3 +168,6 @@ git branch -D branch_to_delete
 git branch --delete branch_to_delete
 
 git merge new_feature
+git merge --no-ff branch_name
+git merge --ff-only branch_name
+git merge --abort
